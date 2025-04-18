@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Detail | DigitalBookStore</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light px-4">
+    <a class="navbar-brand fw-bold" href="index.html">DigitalBookStore</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="ebooks.html">DigitalBookStore</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="account.html">Account</a></li>
+        <li class="nav-item"><a class="nav-link" href="cart.html">🛒</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Book Detail Section -->
+  <section class="container py-5">
+    <div class="row">
+      <!-- Book Image -->
+      <div class="col-md-6">
+        <img id="book-image" src="" alt="Book Image" class="img-fluid" />
+      </div>
+      <!-- Book Info -->
+      <div class="col-md-6">
+        <h2 class="mb-3" id="book-title">Loading...</h2>
+        <p class="lead" id="book-author"></p>
+        <p><strong>Price:</strong> <span id="book-price"></span></p>
+
+        <h5>Description</h5>
+        <p id="book-description"></p>
+
+        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+        <button class="btn btn-success ms-2">Buy Now</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-4 bg-light mt-5">
+    <p>&copy; 2025 EbookStore. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="book-detail.js"></script>
+</body>
+</html>

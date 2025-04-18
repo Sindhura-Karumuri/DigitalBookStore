@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ebooks | DigitalBookStore</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+  <style>
+    .card-img-top {
+      max-height: 250px;
+      object-fit: contain;
+      padding: 1rem;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+      transition: transform 0.2s ease;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn-success, .btn-primary {
+      width: 100%;
+    }
+
+    @media (max-width: 767px) {
+      .card-body .btn {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+      }
+
+      .navbar-brand {
+        font-size: 1.2rem;
+      }
+    }
+
+    .card-text {
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light px-4 shadow-sm">
+    <a class="navbar-brand fw-bold" href="index.html">DigitalBookStore</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse mt-2 mt-lg-0" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" href="ebooks.html">DigitalBookStore</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="account.html">Account</a></li>
+        <li class="nav-item">
+          <a class="nav-link position-relative" href="cart.html">
+            🛒 <span id="cart-count" class="badge bg-danger rounded-pill position-absolute top-0 start-100 translate-middle">0</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Ebooks Section -->
+  <section class="container my-5">
+    <h2 class="text-center mb-4">Our Ebooks Collection</h2>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+
+      <!-- Ebook Cards -->
+      <!-- Ebook 1 -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="https://m.media-amazon.com/images/I/61Ij8nLooNL._AC_UF1000,1000_QL80_.jpg" class="card-img-top" alt="The Power Of Now">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">The Power Of Now</h5>
+            <p class="card-text">Rs.500</p>
+            <div class="mt-auto">
+              <a href="book-detail.html?bookId=1" class="btn btn-primary mb-2">View Details</a>
+              <button class="btn btn-success" onclick="addToCart(1, 'The Power Of Now', 500)">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ebook 2 -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="https://m.media-amazon.com/images/I/71N2HZwRo3L._UF1000,1000_QL80_.jpg" class="card-img-top" alt="Educated">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Educated</h5>
+            <p class="card-text">Rs.480</p>
+            <div class="mt-auto">
+              <a href="book-detail.html?bookId=2" class="btn btn-primary mb-2">View Details</a>
+              <button class="btn btn-success" onclick="addToCart(2, 'Educated', 480)">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ebook 3 -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="https://m.media-amazon.com/images/I/71M1P287BjL.jpg" class="card-img-top" alt="Start With Why">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Start With Why</h5>
+            <p class="card-text">Rs.450</p>
+            <div class="mt-auto">
+              <a href="book-detail.html?bookId=3" class="btn btn-primary mb-2">View Details</a>
+              <button class="btn btn-success" onclick="addToCart(3, 'Start With Why', 450)">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ebook 4 -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="https://m.media-amazon.com/images/I/61157LApbuL._AC_UF1000,1000_QL80_.jpg" class="card-img-top" alt="Man's Search for Meaning">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Man's Search for Meaning</h5>
+            <p class="card-text">Rs.470</p>
+            <div class="mt-auto">
+              <a href="book-detail.html?bookId=4" class="btn btn-primary mb-2">View Details</a>
+              <button class="btn btn-success" onclick="addToCart(4, 'Man\'s Search for Meaning', 470)">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ebook 5 -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="https://m.media-amazon.com/images/I/81gepf1eMqL.jpg" class="card-img-top" alt="To Kill a Mockingbird">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">To Kill a Mockingbird</h5>
+            <p class="card-text">Rs.430</p>
+            <div class="mt-auto">
+              <a href="book-detail.html?bookId=5" class="btn btn-primary mb-2">View Details</a>
+              <button class="btn btn-success" onclick="addToCart(5, 'To Kill a Mockingbird', 430)">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ebook 6 -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="https://m.media-amazon.com/images/I/81Dky+tD+pL._AC_UF1000,1000_QL80_.jpg" class="card-img-top" alt="The Psychology Of Money">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">The Psychology Of Money</h5>
+            <p class="card-text">Rs.420</p>
+            <div class="mt-auto">
+              <a href="book-detail.html?bookId=6" class="btn btn-primary mb-2">View Details</a>
+              <button class="btn btn-success" onclick="addToCart(6, 'The Psychology Of Money', 420)">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-4 bg-light mt-5 border-top">
+    <p class="mb-0">&copy; 2025 EbookStore. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function addToCart(id, title, price) {
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      let existingBook = cart.find(book => book.title === title);
+      if (existingBook) {
+        existingBook.quantity += 1;
+      } else {
+        cart.push({ id, title, price, quantity: 1 });
+      }
+      localStorage.setItem('cart', JSON.stringify(cart));
+      updateCartCount();
+    }
+
+    function updateCartCount() {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const cartCount = document.getElementById('cart-count');
+      const totalItems = cart.reduce((acc, book) => acc + book.quantity, 0);
+      if (totalItems > 0) {
+        cartCount.textContent = totalItems;
+        cartCount.style.display = 'inline-block';
+      } else {
+        cartCount.style.display = 'none';
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', updateCartCount);
+  </script>
+</body>
+</html>
